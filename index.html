@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Gupta | Product Manager & Product Builder</title>
+  <meta name="description"
+    content="Portfolio of Shivam Prakash Gupta — Product Manager with 6+ years of experience building AI, Enterprise SaaS, Retail Technology, and D2C Commerce products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260928" />
+  <style id="featured-carousel-override-css">
+    /* GUARANTEED HORIZONTAL CAROUSEL LAYOUT */
+    .featured-header-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-end !important;
+      text-align: left !important;
+      max-width: 100% !important;
+      margin: 0 0 2.5rem 0 !important;
+      gap: 2rem !important;
+    }
+
+    .featured-header-content {
+      max-width: 720px;
+    }
+
+    .featured-carousel-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.25rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    .carousel-counter {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      font-family: 'Space Grotesk', monospace !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      color: rgba(255, 255, 255, 0.45) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      padding: 0.45rem 1rem !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .counter-curr {
+      color: #ff6b2c !important;
+    }
+
+    .counter-sep {
+      opacity: 0.4;
+    }
+
+    .carousel-arrows {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+    }
+
+    .carousel-btn {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      color: #ffffff !important;
+      cursor: pointer !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+      background: rgba(255, 107, 44, 0.2) !important;
+      border-color: #ff6b2c !important;
+      color: #ff6b2c !important;
+      transform: translateY(-2px) scale(1.05) !important;
+      box-shadow: 0 6px 24px rgba(255, 107, 44, 0.35) !important;
+    }
+
+    .carousel-btn:disabled {
+      opacity: 0.25 !important;
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+      border-color: rgba(255, 255, 255, 0.04) !important;
+    }
+
+    .projects-carousel-container {
+      position: relative !important;
+      width: 100% !important;
+    }
+
+    .carousel-side-btn {
+      position: absolute !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      background: rgba(14, 15, 22, 0.9) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      color: #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      z-index: 10 !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .carousel-side-prev {
+      left: -25px !important;
+    }
+
+    .carousel-side-next {
+      right: -25px !important;
+    }
+
+    .carousel-side-btn:hover:not(:disabled) {
+      background: rgba(255, 107, 44, 0.25) !important;
+      border-color: #ff6b2c !important;
+      color: #ff6b2c !important;
+      transform: translateY(-50%) scale(1.08) !important;
+      box-shadow: 0 8px 32px rgba(255, 107, 44, 0.45) !important;
+    }
+
+    .carousel-side-btn:disabled {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+
+    .projects-carousel-wrapper {
+      position: relative !important;
+      width: 100% !important;
+      overflow: hidden !important;
+      padding: 0.75rem 0.25rem 1.75rem 0.25rem !important;
+      cursor: grab !important;
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      touch-action: pan-y !important;
+    }
+
+    .projects-carousel-wrapper.is-dragging {
+      cursor: grabbing !important;
+    }
+
+    .projects-carousel-track {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      gap: 2rem !important;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      will-change: transform !important;
+      align-items: stretch !important;
+      width: 100% !important;
+    }
+
+    @media (min-width: 769px) {
+      .projects-carousel-track>.project-card {
+        flex: 0 0 calc((100% - 2rem) / 2) !important;
+        width: calc((100% - 2rem) / 2) !important;
+        min-width: calc((100% - 2rem) / 2) !important;
+        max-width: calc((100% - 2rem) / 2) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .featured-header-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.5rem !important;
+      }
+
+      .carousel-side-btn {
+        display: none !important;
+      }
+
+      .projects-carousel-track {
+        gap: 1.25rem !important;
+      }
+
+      .projects-carousel-track>.project-card {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    .project-card.featured-cta-card {
+      background: radial-gradient(circle at 85% 15%, rgba(255, 107, 44, 0.15) 0%, transparent 55%),
+        linear-gradient(175deg, rgba(22, 24, 34, 0.88) 0%, rgba(13, 14, 19, 0.95) 100%) !important;
+      border: 1px solid rgba(255, 107, 44, 0.28) !important;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .project-card.featured-cta-card:hover {
+      background: radial-gradient(circle at 85% 15%, rgba(255, 107, 44, 0.24) 0%, transparent 65%),
+        linear-gradient(175deg, rgba(28, 30, 42, 0.95) 0%, rgba(16, 18, 26, 0.98) 100%) !important;
+      border-color: #ff6b2c !important;
+      box-shadow: 0 24px 52px rgba(0, 0, 0, 0.5), 0 0 32px rgba(255, 107, 44, 0.2) !important;
+      transform: translateY(-6px) !important;
+    }
+
+    .cta-card-visual {
+      position: relative !important;
+      width: 100% !important;
+      height: 240px !important;
+      background: linear-gradient(145deg, rgba(255, 107, 44, 0.08) 0%, rgba(10, 11, 15, 0.95) 100%) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+    }
+
+    .cta-visual-pattern {
+      position: absolute !important;
+      inset: 0 !important;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) !important;
+      background-size: 20px 20px !important;
+      opacity: 0.5 !important;
+    }
+
+    .cta-icon-glow {
+      position: relative !important;
+      width: 76px !important;
+      height: 76px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 107, 44, 0.12) !important;
+      border: 1px solid rgba(255, 107, 44, 0.35) !important;
+      color: #ff6b2c !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 0 36px rgba(255, 107, 44, 0.3) !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+      z-index: 2 !important;
+    }
+
+    .project-card.featured-cta-card:hover .cta-icon-glow {
+      transform: scale(1.1) rotate(6deg) !important;
+      box-shadow: 0 0 48px rgba(255, 107, 44, 0.5) !important;
+    }
+
+    .cta-btn-wrapper {
+      color: #ff6b2c !important;
+    }
+
+    .project-card.featured-cta-card:hover .cta-btn-wrapper {
+      color: #ff854d !important;
+    }
+
+    .project-card.featured-cta-card:hover .cta-btn-wrapper .btn-arrow {
+      transform: translateX(6px) !important;
+    }
+
+    /* Contact Section Single-line Heading & Evenly Distributed Details */
+    .contact-content {
+      max-width: 1040px !important;
+      margin: 0 auto !important;
+    }
+
+    .contact-heading {
+      font-size: clamp(1.85rem, 2.9vw, 2.65rem) !important;
+      white-space: nowrap !important;
+    }
+
+    .contact-desc {
+      max-width: 760px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .contact-info-grid {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      gap: 1.5rem !important;
+      padding-top: 2.5rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      width: 100% !important;
+    }
+
+    .info-item {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.35rem !important;
+      text-align: left !important;
+      flex: 0 0 auto !important;
+    }
+
+    @media (max-width: 768px) {
+      .contact-heading {
+        white-space: normal !important;
+      }
+
+      .contact-info-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader-container">
+    <div class="loader-content">
+      <div class="loader-spinner">
+        <svg class="circular-chart" viewBox="0 0 36 36">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+          <path id="loader-circle" class="circle" stroke-dasharray="0, 100"
+            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg>
+        <span id="loader-percent" class="loader-percent">0%</span>
+      </div>
+      <p class="loader-status">Loading experience...</p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">Shivam Gupta</a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="#contact" class="btn-connect">
+          <span>Let's Connect</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#hero" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#contact" class="btn-connect mobile-connect-btn">Let's Connect →</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION WITH SCROLL ANIMATION -->
+    <section id="hero" class="hero-section">
+      <!-- Pinned Canvas Background -->
+      <div class="hero-canvas-container">
+        <canvas id="scroll-canvas" aria-label="Interactive Hero Animation"></canvas>
+        <div class="hero-scrim-left"></div>
+        <div class="hero-scrim-right"></div>
+        <div class="hero-scrim-bottom"></div>
+      </div>
+
+      <!-- Safe-Area Hero Content -->
+      <div class="hero-content-wrapper">
+        <div class="hero-grid">
+          <!-- Left Column -->
+          <div class="hero-left">
+            <span class="hero-eyebrow">Hey, I'm</span>
+            <h1 class="hero-title">Shivam<br />Gupta</h1>
+            <p class="hero-tagline">Product Manager | Product Builder | AI & Data Enthusiast</p>
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn-primary">
+                <span>Explore My Work</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span>Let's Connect</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column (Positioned in Safe Margin) -->
+          <div class="hero-right">
+            <div class="hero-pitch-card">
+              <h2 class="pitch-title">Building products that turn ideas into impact.</h2>
+              <p class="pitch-text">
+                Product Manager with 6+ years of experience turning customer problems into scalable digital products.
+                From AI-powered experiences to D2C growth, I bring product strategy, data, and execution together to
+                deliver measurable business outcomes.
+              </p>
+              <div class="hero-metrics-pill">
+                <div class="metric-mini">
+                  <span class="metric-number">6+</span>
+                  <span class="metric-label">Years in Product</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-mini">
+                  <span class="metric-number">3×</span>
+                  <span class="metric-label">Order Growth</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-mini">
+                  <span class="metric-number">50%</span>
+                  <span class="metric-label">CAC Reduction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Pillars Strip -->
+        <div class="hero-pillars-strip">
+          <div class="pillar-item">
+            <span class="pillar-num">#01</span>
+            <span class="pillar-name">Product Strategy</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#02</span>
+            <span class="pillar-name">AI & LLM Products</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#03</span>
+            <span class="pillar-name">Data & Analytics</span>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">#04</span>
+            <span class="pillar-name">D2C & Enterprise SaaS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & IMPACT STRIP -->
+    <section id="brands" class="brands-section">
+      <div class="container">
+        <div class="brands-strip">
+          <span class="brands-label">Experience & Impact Across</span>
+          <div class="brands-list">
+            <span class="brand-tag"><span class="brand-bullet">●</span> Sanskriti Fab</span>
+            <span class="brand-tag"><span class="brand-bullet">●</span> Advance Auto Parts</span>
+            <span class="brand-tag"><span class="brand-bullet">●</span> ReTech Labs</span>
+            <span class="brand-tag"><span class="brand-bullet">●</span> D2C</span>
+            <span class="brand-tag"><span class="brand-bullet">●</span> E-commerce</span>
+            <span class="brand-tag"><span class="brand-bullet">●</span> Retail Technology</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION ("Behind the Designs" Style) -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column -->
+          <div class="about-left">
+            <div class="section-tag-wrapper">
+              <span class="section-tag">ABOUT ME</span>
+            </div>
+            <h2 class="section-heading">Building Products That Solve Real Problems</h2>
+            <p class="about-lead">
+              I am a Product Manager passionate about transforming complex customer problems into intuitive,
+              high-velocity digital products and AI-powered systems.
+            </p>
+            <p class="about-body">
+              With over 6 years spanning a founder-led startup and Fortune 500 enterprises, I specialize in user
+              discovery, product analytics, hypothesis-driven experimentation, and cross-functional engineering
+              execution.
+            </p>
+            <div class="about-actions">
+              <a href="#contact" class="btn-primary">
+                <span>Let's Talk</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="Shivam_Prakash_Gupta-Resume (2).pdf" target="_blank" class="btn-secondary">
+                <span>View Resume</span>
+                <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="about-right">
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <div class="stat-value">6+</div>
+                <div class="stat-title">Years Experience</div>
+                <div class="stat-desc">Building AI, Enterprise SaaS, & D2C platforms</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">3×</div>
+                <div class="stat-title">Order Scale</div>
+                <div class="stat-desc">50% CAC drop & 18% repeat purchase rate</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">25%</div>
+                <div class="stat-title">Latency Speedup</div>
+                <div class="stat-desc">AWS infrastructure & Grafana optimization</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">~8%</div>
+                <div class="stat-title">Business Growth</div>
+                <div class="stat-desc">Retail intelligence for Target & Kroger</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: FEATURED PROJECTS (PORTFOLIO SHOWCASE) -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header featured-header-row">
+          <div class="featured-header-content">
+            <div class="section-tag-wrapper">
+              <span class="section-tag">PORTFOLIO</span>
+            </div>
+            <h2 class="section-heading">FEATURED PROJECTS</h2>
+            <p class="section-subheading">Curated product initiatives across AI speech analytics, team intelligence
+              dashboards, personalization, and growth.</p>
+          </div>
+          <div class="featured-carousel-nav" aria-label="Featured projects carousel navigation">
+            <div class="carousel-counter" aria-live="polite">
+              <span id="carousel-current" class="counter-curr">01</span>
+              <span class="counter-sep">/</span>
+              <span id="carousel-total" class="counter-total">04</span>
+            </div>
+            <div class="carousel-arrows">
+              <button type="button" id="featured-prev-btn" class="carousel-btn" aria-label="Previous project" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button type="button" id="featured-next-btn" class="carousel-btn" aria-label="Next project">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-carousel-container">
+          <button type="button" class="carousel-side-btn carousel-side-prev" id="carousel-side-prev"
+            aria-label="Previous project" disabled>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div class="projects-carousel-wrapper" id="projects-carousel">
+            <div class="projects-carousel-track" id="projects-track">
+              <!-- Project 1: OutLoud (Capstone) -->
+              <a href="https://app.notion.com/p/Capstone-Project-OutLoud-3c2a5115b1e2803381a0ec7dc65958e8"
+                target="_blank" rel="noopener noreferrer" class="project-card featured-card">
+                <div class="project-thumb">
+                  <span class="thumb-badge">Capstone Project</span>
+                  <img src="assets/outloud.jpg" alt="OutLoud AI Speaking Practice Platform" class="project-thumb-img"
+                    loading="lazy" />
+                  <div class="project-thumb-overlay"></div>
+                </div>
+                <div class="project-inner">
+                  <div class="project-header">
+                    <div class="project-meta">
+                      <span class="project-category">AI / CAPSTONE PROJECT</span>
+                      <span class="project-role">Lead Product Manager</span>
+                    </div>
+                    <h3 class="project-title">OutLoud: AI-Powered Speaking Practice for Interview Confidence</h3>
+                    <p class="project-desc">
+                      An AI-powered speaking practice platform designed to build interview confidence through
+                      interactive speech analysis, real-time feedback, and guided practice workflows.
+                    </p>
+                    <div class="project-tags">
+                      <span>AI Product</span>
+                      <span>Speech AI</span>
+                      <span>Interview Prep</span>
+                      <span>User Experience</span>
+                      <span>Capstone</span>
+                    </div>
+                  </div>
+                  <div class="project-footer">
+                    <span class="project-link">
+                      <span>View Project</span>
+                      <span class="btn-arrow">→</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 2: WordRadar -->
+              <a href="https://app.notion.com/p/WorkRadar-AI-Powered-Manager-Dashboard-for-Daily-Team-Insights-3b8a5115b1e2801289cdcf1edfd423c3?source=copy_link"
+                target="_blank" rel="noopener noreferrer" class="project-card featured-card">
+                <div class="project-thumb">
+                  <span class="thumb-badge">Enterprise SaaS</span>
+                  <img src="assets/wordradar.jpg" alt="WordRadar AI Manager Dashboard" class="project-thumb-img"
+                    loading="lazy" />
+                  <div class="project-thumb-overlay"></div>
+                </div>
+                <div class="project-inner">
+                  <div class="project-header">
+                    <div class="project-meta">
+                      <span class="project-category">ENTERPRISE SAAS / AI</span>
+                      <span class="project-role">Product Manager</span>
+                    </div>
+                    <h3 class="project-title">WordRadar: AI-Powered Manager Dashboard for Daily Team Insights</h3>
+                    <p class="project-desc">
+                      An intelligent management dashboard synthesizing daily team signals, progress updates, and
+                      operational bottlenecks into actionable insights for engineering and product leaders.
+                    </p>
+                    <div class="project-tags">
+                      <span>AI Dashboards</span>
+                      <span>Enterprise SaaS</span>
+                      <span>Team Analytics</span>
+                      <span>B2B Product</span>
+                      <span>Workflow Insights</span>
+                    </div>
+                  </div>
+                  <div class="project-footer">
+                    <span class="project-link">
+                      <span>View Project</span>
+                      <span class="btn-arrow">→</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 3: VitaFit -->
+              <a href="https://app.notion.com/p/VitaFit-Personalized-Nutrition-Platform-AI-Powered-Feature-Development-3b3a5115b1e280648c72d2362fe4dcd5?source=copy_link"
+                target="_blank" rel="noopener noreferrer" class="project-card featured-card">
+                <div class="project-thumb">
+                  <span class="thumb-badge">HealthTech</span>
+                  <img src="assets/vitafit.jpg" alt="VitaFit Personalized Nutrition Platform" class="project-thumb-img"
+                    loading="lazy" />
+                  <div class="project-thumb-overlay"></div>
+                </div>
+                <div class="project-inner">
+                  <div class="project-header">
+                    <div class="project-meta">
+                      <span class="project-category">HEALTH TECH / AI</span>
+                      <span class="project-role">Product Feature Lead</span>
+                    </div>
+                    <h3 class="project-title">VitaFit: Personalized Nutrition Platform (AI-Powered Feature Development)
+                    </h3>
+                    <p class="project-desc">
+                      AI-powered feature specification and product development for personalized dietary planning, habit
+                      tracking, and tailored nutrition recommendations.
+                    </p>
+                    <div class="project-tags">
+                      <span>AI Personalization</span>
+                      <span>HealthTech</span>
+                      <span>Feature Development</span>
+                      <span>Dietary Insights</span>
+                      <span>Mobile Product</span>
+                    </div>
+                  </div>
+                  <div class="project-footer">
+                    <span class="project-link">
+                      <span>View Project</span>
+                      <span class="btn-arrow">→</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 4: Zepto Smart Bundle -->
+              <a href="https://app.notion.com/p/Zepto-Smart-Bundle-Recommendations-Increasing-AOV-Through-Personalized-Product-Bundles-3b3a5115b1e2801a934be7c247c6b666?source=copy_link"
+                target="_blank" rel="noopener noreferrer" class="project-card featured-card">
+                <div class="project-thumb">
+                  <span class="thumb-badge">Quick Commerce</span>
+                  <img src="assets/zepto.jpg" alt="Zepto Smart Bundle Recommendations" class="project-thumb-img"
+                    loading="lazy" />
+                  <div class="project-thumb-overlay"></div>
+                </div>
+                <div class="project-inner">
+                  <div class="project-header">
+                    <div class="project-meta">
+                      <span class="project-category">QUICK COMMERCE / GROWTH</span>
+                      <span class="project-role">Product Case Study</span>
+                    </div>
+                    <h3 class="project-title">Zepto Smart Bundle: Increasing AOV through Personalized Product Bundles
+                    </h3>
+                    <p class="project-desc">
+                      Product strategy and recommendation architecture designed to increase Average Order Value (AOV) on
+                      Zepto through context-aware, personalized product bundling.
+                    </p>
+                    <div class="project-tags">
+                      <span>Product Strategy</span>
+                      <span>AOV Optimization</span>
+                      <span>Recommendation Engines</span>
+                      <span>Personalization</span>
+                      <span>Quick Commerce</span>
+                    </div>
+                  </div>
+                  <div class="project-footer">
+                    <span class="project-link">
+                      <span>View Project</span>
+                      <span class="btn-arrow">→</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 5: View More Projects CTA State -->
+              <a href="https://app.notion.com/p/3b2a5115b1e280e09e9be798a3f46459?v=3b2a5115b1e28040b708000ca6e373c3"
+                target="_blank" rel="noopener noreferrer" class="project-card featured-card featured-cta-card">
+                <div class="cta-card-visual">
+                  <div class="cta-visual-pattern"></div>
+                  <span class="thumb-badge">Notion Archive</span>
+                  <div class="cta-icon-glow">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </div>
+                </div>
+                <div class="project-inner cta-card-inner">
+                  <div class="project-header">
+                    <div class="project-meta">
+                      <span class="project-category">COMPLETE PRODUCT ARCHIVE</span>
+                      <span class="project-role">All Initiatives</span>
+                    </div>
+                    <h3 class="project-title">Explore Complete Portfolio &amp; Case Studies</h3>
+                    <p class="project-desc">
+                      Discover 10+ additional product initiatives, in-depth PRDs, end-to-end Figma workflows, metrics
+                      frameworks, and growth experiments in the Notion workspace.
+                    </p>
+                    <div class="project-tags cta-features">
+                      <span>10+ Case Studies</span>
+                      <span>PRDs &amp; Specs</span>
+                      <span>Live Prototypes</span>
+                      <span>Metrics Frameworks</span>
+                    </div>
+                  </div>
+                  <div class="project-footer cta-footer">
+                    <span class="project-link cta-btn-wrapper">
+                      <span>View More Projects</span>
+                      <span class="btn-arrow">→</span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" class="carousel-side-btn carousel-side-next" id="carousel-side-next"
+            aria-label="Next project">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXPERIENCE HIGHLIGHTS -->
+    <section id="experience-highlights" class="projects-section experience-highlights-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">WORK IMPACT</span>
+          </div>
+          <h2 class="section-heading">EXPERIENCE HIGHLIGHTS</h2>
+          <p class="section-subheading">Key achievements and measurable impact delivered across professional roles.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Highlight 1: Sanskriti Fab -->
+          <article class="project-card">
+            <div class="project-inner">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-category">D2C COMMERCE / GROWTH</span>
+                  <span class="project-role">Product Manager (Co-Founder)</span>
+                </div>
+                <h3 class="project-title">Sanskriti Fab: D2C E-Commerce Growth Platform</h3>
+                <p class="project-desc">
+                  Owned the end-to-end product lifecycle for a Shopify-based D2C brand. Conducted deep user research and
+                  funnel analytics to rapidly test product hypotheses, achieving exceptional customer acquisition and
+                  retention economics.
+                </p>
+                <div class="project-metrics">
+                  <div class="metric-pill">
+                    <span class="metric-val">3×</span>
+                    <span class="metric-txt">Order Growth</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">50%</span>
+                    <span class="metric-txt">CAC Reduction</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">18%</span>
+                    <span class="metric-txt">Repeat Rate</span>
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span>Shopify Analytics</span>
+                  <span>A/B Testing</span>
+                  <span>Funnel Optimization</span>
+                  <span>Unit Economics</span>
+                  <span>Payment Integrations</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#experience" class="project-link">
+                  <span>Explore Impact Details</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Highlight 2: Advance Auto Parts -->
+          <article class="project-card">
+            <div class="project-inner">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-category">AI PRODUCTS / CONVERSATIONAL NLP</span>
+                  <span class="project-role">Product Owner</span>
+                </div>
+                <h3 class="project-title">Advance Auto Parts: AI Support & Cart Recovery</h3>
+                <p class="project-desc">
+                  Led product delivery of AI-powered customer experience tools, including an NLP-based automotive
+                  customer support chatbot and cart abandonment automation to boost self-service, conversion, and
+                  purchase recovery.
+                </p>
+                <div class="project-metrics">
+                  <div class="metric-pill">
+                    <span class="metric-val">24/7</span>
+                    <span class="metric-txt">Automated Support</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">RICE</span>
+                    <span class="metric-txt">Backlog Prioritization</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">NLP</span>
+                    <span class="metric-txt">Intent Resolution</span>
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span>Conversational AI</span>
+                  <span>NLP Chatbot</span>
+                  <span>Customer Support Automation</span>
+                  <span>PRD & User Stories</span>
+                  <span>Agile/Scrum</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#experience" class="project-link">
+                  <span>Explore Impact Details</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Highlight 3: ReTech Labs -->
+          <article class="project-card">
+            <div class="project-inner">
+              <div class="project-header">
+                <div class="project-meta">
+                  <span class="project-category">ENTERPRISE SAAS / RETAIL TECH</span>
+                  <span class="project-role">Product Owner | Project Manager</span>
+                </div>
+                <h3 class="project-title">ReTech Labs: Store Digitization Analytics</h3>
+                <p class="project-desc">
+                  Delivered real-time store digitization & planogram analytics for top US retailers including Target,
+                  Kroger, and Sam's Club. Orchestrated AWS infrastructure optimizations to accelerate dashboard latency
+                  and reporting UX.
+                </p>
+                <div class="project-metrics">
+                  <div class="metric-pill">
+                    <span class="metric-val">~8%</span>
+                    <span class="metric-txt">Business Growth</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">25%</span>
+                    <span class="metric-txt">Dashboard Speedup (3.2s→2.4s)</span>
+                  </div>
+                  <div class="metric-pill">
+                    <span class="metric-val">4+</span>
+                    <span class="metric-txt">Top Retail Chains</span>
+                  </div>
+                </div>
+                <div class="project-tags">
+                  <span>Store Digitization</span>
+                  <span>Planograms</span>
+                  <span>Grafana</span>
+                  <span>Power BI</span>
+                  <span>AWS Optimization</span>
+                  <span>SQL Analytics</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <a href="#experience" class="project-link">
+                  <span>Explore Impact Details</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">CAREER PATH</span>
+          </div>
+          <h2 class="section-heading">Professional Experience</h2>
+          <p class="section-subheading">Track record of strategic leadership, cross-functional execution, and
+            quantifiable business outcomes.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Experience 1 -->
+          <div class="timeline-card">
+            <div class="timeline-badge"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Product Manager (Co-Founder)</h3>
+                  <div class="timeline-company">Sanskriti Fab</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Jul '24 – Mar '26</span>
+                  <span class="timeline-location">Gurugram, IN</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li>Owned product lifecycle for a Shopify-based D2C platform, overseeing discovery, roadmap,
+                  experimentation, and optimization, impacting 3x order growth and 18% repeat purchase rate.</li>
+                <li>Drove customer research by structuring interviews and analyzing analytics, identifying pain points
+                  across acquisition and retention, and translating findings into 8+ prioritized roadmap initiatives.
+                </li>
+                <li>Coordinated cross-functional teams to execute rapid product experiments, achieving a 50% reduction
+                  in acquisition cost and accelerating feature delivery cycles.</li>
+                <li>Prioritized third-party integrations, balancing implementation effort and customer value, enabling
+                  scalable analytics and marketing automation infrastructure.</li>
+                <li>Made a strategic decision to sunset the venture after comprehensive review of unit economics,
+                  acquisition efficiency, and capital needs, demonstrating disciplined product judgment.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span>Product Strategy</span>
+                <span>D2C E-Commerce</span>
+                <span>User Research</span>
+                <span>Funnel Analytics</span>
+                <span>Roadmapping</span>
+                <span>Shopify</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-card">
+            <div class="timeline-badge"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Product Owner</h3>
+                  <div class="timeline-company">Advance Auto Parts</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Nov '22 – Jul '24</span>
+                  <span class="timeline-location">Hyderabad, IN</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li>Directed delivery of AI-powered customer experience products, launching a rules-based automotive
+                  support chatbot and cart abandonment automation that improved self-service and elevated purchase
+                  recovery rates.</li>
+                <li>Structured and prioritized product backlog using RICE framework, aligning initiatives with user
+                  needs and business outcomes to enhance customer satisfaction metrics.</li>
+                <li>Defined user stories and acceptance criteria from stakeholder requirements, expediting engineering
+                  throughput and delivering 5+ new features in 10 months.</li>
+                <li>Partnered with Support and Analytics teams to pinpoint high-impact pain points, driving AI-powered
+                  solutions adopted by 50% of support users.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span>Conversational AI</span>
+                <span>NLP Chatbot</span>
+                <span>RICE Framework</span>
+                <span>PRDs & User Stories</span>
+                <span>Agile Scrum</span>
+                <span>Jira</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-card">
+            <div class="timeline-badge"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Product Owner | Project Manager</h3>
+                  <div class="timeline-company">ReTech Labs Inc.</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">May '20 – Nov '22</span>
+                  <span class="timeline-location">Noida, IN</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li>Led product delivery for a Store Digitization platform, enabling real-time planogram visualization
+                  and retail analytics, contributing to 8% business growth at enterprise clients.</li>
+                <li>Defined feature roadmaps, workflows, and backlog priorities spanning web, mobile, and dashboard
+                  products, coordinating execution with engineering and design.</li>
+                <li>Partnered with engineering to optimize AWS and Grafana infrastructure, reducing dashboard latency by
+                  25% and improving user experience for analytics customers.</li>
+                <li>Leveraged SQL, Power BI, and usage analytics to uncover user patterns, supporting data-driven
+                  decision making for new feature adoption.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span>Enterprise SaaS</span>
+                <span>Store Digitization</span>
+                <span>Planograms</span>
+                <span>AWS Optimization</span>
+                <span>Power BI</span>
+                <span>SQL Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-card">
+            <div class="timeline-badge"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">MIS Executive / Analyst</h3>
+                  <div class="timeline-company">EON Electric Ltd.</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date">Sep '18 – Jun '19</span>
+                  <span class="timeline-location">Noida, IN</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li>Designed and launched operational reporting dashboards for executive leadership, accelerating
+                  decision cycles by 30%.</li>
+                <li>Developed data-driven infographic presentations, equipping leadership with actionable insights that
+                  shaped quarterly product roadmaps.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span>Data Analysis</span>
+                <span>Executive Dashboards</span>
+                <span>Operations Reporting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE COMPETENCIES & SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">CAPABILITIES</span>
+          </div>
+          <h2 class="section-heading">Core Competencies</h2>
+          <p class="section-subheading">Product craftsmanship, AI systems, analytics infrastructure, and execution
+            toolstack.</p>
+        </div>
+
+        <div class="skills-bento-grid">
+          <!-- Category 1: Product Management -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">🎯</div>
+              <h3 class="skill-category-title">Product Management</h3>
+            </div>
+            <p class="skill-category-desc">End-to-end product discovery, strategic prioritization, and agile product
+              delivery.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Product Strategy</span>
+              <span class="skill-tag">Product Discovery</span>
+              <span class="skill-tag">User Research</span>
+              <span class="skill-tag">Customer Interviews</span>
+              <span class="skill-tag">Roadmapping</span>
+              <span class="skill-tag">RICE Prioritization</span>
+              <span class="skill-tag">Product Analytics</span>
+              <span class="skill-tag">Journey Mapping</span>
+              <span class="skill-tag">A/B Testing</span>
+              <span class="skill-tag">Product PRDs</span>
+            </div>
+          </div>
+
+          <!-- Category 2: AI Product Management -->
+          <div class="skill-category-card highlight">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">⚡</div>
+              <h3 class="skill-category-title">AI Product Management</h3>
+            </div>
+            <p class="skill-category-desc">Building agentic workflows, conversational AI, and LLM-powered applications.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag accent">LLM Applications</span>
+              <span class="skill-tag accent">AI Agents</span>
+              <span class="skill-tag accent">Prompt Engineering</span>
+              <span class="skill-tag accent">RAG Pipelines</span>
+              <span class="skill-tag accent">AI Evals</span>
+              <span class="skill-tag accent">AI Workflow Automation</span>
+              <span class="skill-tag accent">NLP Systems</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Analytics & Data -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">📊</div>
+              <h3 class="skill-category-title">Analytics & Data</h3>
+            </div>
+            <p class="skill-category-desc">Hypothesis testing, funnel analysis, latency optimization, and metric
+              definition.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Shopify Analytics</span>
+              <span class="skill-tag">Amplitude</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Grafana</span>
+              <span class="skill-tag">Funnel Analysis</span>
+              <span class="skill-tag">KPI Definition</span>
+              <span class="skill-tag">SQL & Python</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Stack -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-badge">🛠️</div>
+              <h3 class="skill-category-title">Tools & Frameworks</h3>
+            </div>
+            <p class="skill-category-desc">Tools powering seamless cross-functional collaboration and rapid prototyping.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Confluence</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">API Integration</span>
+              <span class="skill-tag">n8n</span>
+              <span class="skill-tag">Claude Code</span>
+              <span class="skill-tag">Lovable</span>
+              <span class="skill-tag">Replit</span>
+              <span class="skill-tag">AWS Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section id="credentials" class="credentials-section">
+      <div class="container">
+        <div class="credentials-grid">
+          <!-- Education Column -->
+          <div class="credential-col">
+            <div class="section-tag-wrapper">
+              <span class="section-tag">EDUCATION</span>
+            </div>
+            <h2 class="section-heading-sm">Academic Background</h2>
+
+            <div class="credential-cards">
+              <div class="cred-card">
+                <div class="cred-badge-icon">🎓</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">Post Graduate Diploma in Data Science</h4>
+                  <div class="cred-org">IIIT Bangalore & UpGrad</div>
+                  <div class="cred-period">Jan '19 – Dec '19</div>
+                </div>
+              </div>
+
+              <div class="cred-card">
+                <div class="cred-badge-icon">🎓</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">B. Tech. – Mechanical Engineering</h4>
+                  <div class="cred-org">Moradabad Institute of Technology (MIT)</div>
+                  <div class="cred-period">Jun '13 – May '17 • Moradabad, IN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="credential-col">
+            <div class="section-tag-wrapper">
+              <span class="section-tag">CERTIFICATIONS</span>
+            </div>
+            <h2 class="section-heading-sm">Professional Certifications</h2>
+
+            <div class="credential-cards">
+              <div class="cred-card highlight-card">
+                <div class="cred-badge-icon">🏆</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">AI-First Product Manager</h4>
+                  <div class="cred-org">Airtribe</div>
+                  <p class="cred-note">Hands-on AI Product Strategy, LLMs, AI Agents, Prompt Engineering, RAG, and
+                    AI-powered workflows.</p>
+                </div>
+              </div>
+
+              <div class="cred-card">
+                <div class="cred-badge-icon">📜</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">Certified Scrum Product Owner (CSPO®)</h4>
+                  <div class="cred-org">Scrum Alliance • Jun '24</div>
+                </div>
+              </div>
+
+              <div class="cred-card">
+                <div class="cred-badge-icon">📜</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">Certified Scrum Master (CSM®)</h4>
+                  <div class="cred-org">Scrum Alliance • Jun '24</div>
+                </div>
+              </div>
+
+              <div class="cred-card">
+                <div class="cred-badge-icon">☁️</div>
+                <div class="cred-info">
+                  <h4 class="cred-title">Oracle Cloud Infrastructure Certified Associate</h4>
+                  <div class="cred-org">Oracle (1Z0-1085-20)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FINAL CTA SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-bg-glow"></div>
+          <div class="contact-content">
+            <span class="section-tag">LET'S CONNECT</span>
+            <h2 class="contact-heading">Have a product challenge to solve?</h2>
+            <p class="contact-subheading">Let's turn it into something people love to use.</p>
+            <p class="contact-desc">
+              Whether you are looking to build a new AI product, scale an existing platform, or discuss product
+              leadership opportunities, my inbox is always open.
+            </p>
+
+            <div class="contact-btn-group">
+              <a href="mailto:gupta.shivam.sp26@gmail.com" class="btn-primary btn-large">
+                <span>Get in Touch</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="Shivam_Prakash_Gupta-Resume (2).pdf" target="_blank" rel="noopener noreferrer"
+                class="btn-secondary btn-large">
+                <span>View Resume</span>
+                <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="contact-info-grid">
+              <div class="info-item">
+                <span class="info-label">EMAIL</span>
+                <a href="mailto:gupta.shivam.sp26@gmail.com" class="info-val">Email me ↗</a>
+              </div>
+              <div class="info-item">
+                <span class="info-label">LOCATION</span>
+                <span class="info-val">Gurugram, IN</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">LINKEDIN</span>
+                <a href="https://www.linkedin.com/in/shivampgupta/" target="_blank" rel="noopener noreferrer"
+                  class="info-val">LinkedIn ↗</a>
+              </div>
+              <div class="info-item">
+                <span class="info-label">GITHUB</span>
+                <a href="https://github.com/shivam08gupta" target="_blank" rel="noopener noreferrer"
+                  class="info-val">GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-brand">Shivam Gupta</a>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#hero" class="footer-back-to-top" aria-label="Back to top">↑</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Shivam Prakash Gupta. All rights reserved.</p>
+        <p class="footer-tagline">Crafted with precision & passion for product excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20260920"></script>
+  <script id="featured-carousel-inline-script">
+    (function initFeaturedCarouselRobust() {
+      function setup() {
+        const wrapper = document.getElementById('projects-carousel');
+        const track = document.getElementById('projects-track');
+        const prevBtns = [
+          document.getElementById('featured-prev-btn'),
+          document.getElementById('carousel-side-prev')
+        ].filter(Boolean);
+        const nextBtns = [
+          document.getElementById('featured-next-btn'),
+          document.getElementById('carousel-side-next')
+        ].filter(Boolean);
+        const currentNumEl = document.getElementById('carousel-current');
+        const totalNumEl = document.getElementById('carousel-total');
+
+        if (!wrapper || !track) return;
+
+        const cards = Array.from(track.children);
+        const totalCards = cards.length;
+        let currentIndex = 0;
+        let isDragging = false;
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let draggedDistance = 0;
+        let hasMoved = false;
+
+        function getVisibleCount() {
+          return window.innerWidth > 768 ? 2 : 1;
+        }
+
+        function getMaxIndex() {
+          return Math.max(0, totalCards - getVisibleCount());
+        }
+
+        function getStepDistance() {
+          if (cards.length === 0) return 0;
+          const cardRect = cards[0].getBoundingClientRect();
+          const style = window.getComputedStyle(track);
+          const gap = parseFloat(style.gap) || 32;
+          return cardRect.width + gap;
+        }
+
+        function updateCarousel(animate) {
+          const maxIndex = getMaxIndex();
+          currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+          const step = getStepDistance();
+          const targetTranslate = -currentIndex * step;
+          currentTranslate = targetTranslate;
+          prevTranslate = targetTranslate;
+
+          if (animate !== false) {
+            track.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          } else {
+            track.style.transition = 'none';
+          }
+          track.style.transform = 'translateX(' + targetTranslate + 'px)';
+
+          prevBtns.forEach(btn => {
+            btn.disabled = (currentIndex <= 0);
+          });
+          nextBtns.forEach(btn => {
+            btn.disabled = (currentIndex >= maxIndex);
+          });
+
+          if (currentNumEl) {
+            currentNumEl.textContent = String(currentIndex + 1).padStart(2, '0');
+          }
+          if (totalNumEl) {
+            totalNumEl.textContent = String(maxIndex + 1).padStart(2, '0');
+          }
+        }
+
+        function slideNext() {
+          const maxIndex = getMaxIndex();
+          if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel(true);
+          }
+        }
+
+        function slidePrev() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel(true);
+          }
+        }
+
+        prevBtns.forEach(btn => {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            slidePrev();
+          });
+        });
+
+        nextBtns.forEach(btn => {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            slideNext();
+          });
+        });
+
+        // Touch & Mouse Dragging Engine
+        function onPointerDown(e) {
+          if (e.type === 'mousedown' && e.button !== 0) return;
+          isDragging = true;
+          hasMoved = false;
+          draggedDistance = 0;
+          startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+          track.style.transition = 'none';
+          wrapper.classList.add('is-dragging');
+        }
+
+        function onPointerMove(e) {
+          if (!isDragging) return;
+          const currentX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+          const diffX = currentX - startX;
+          draggedDistance = diffX;
+
+          if (Math.abs(diffX) > 6) {
+            hasMoved = true;
+          }
+
+          const maxIndex = getMaxIndex();
+          const step = getStepDistance();
+          const minTranslate = -maxIndex * step;
+          const maxTranslate = 0;
+
+          let newTranslate = prevTranslate + diffX;
+          if (newTranslate > maxTranslate) {
+            newTranslate = maxTranslate + (newTranslate - maxTranslate) * 0.25;
+          } else if (newTranslate < minTranslate) {
+            newTranslate = minTranslate + (newTranslate - minTranslate) * 0.25;
+          }
+
+          currentTranslate = newTranslate;
+          track.style.transform = 'translateX(' + newTranslate + 'px)';
+        }
+
+        function onPointerUp() {
+          if (!isDragging) return;
+          isDragging = false;
+          wrapper.classList.remove('is-dragging');
+
+          const maxIndex = getMaxIndex();
+          const threshold = 40;
+
+          if (draggedDistance < -threshold && currentIndex < maxIndex) {
+            currentIndex++;
+          } else if (draggedDistance > threshold && currentIndex > 0) {
+            currentIndex--;
+          }
+
+          updateCarousel(true);
+
+          if (hasMoved) {
+            const cancelClick = function (ev) {
+              ev.preventDefault();
+              ev.stopPropagation();
+              window.removeEventListener('click', cancelClick, true);
+            };
+            window.addEventListener('click', cancelClick, true);
+          }
+        }
+
+        wrapper.addEventListener('touchstart', onPointerDown, { passive: true });
+        window.addEventListener('touchmove', onPointerMove, { passive: false });
+        window.addEventListener('touchend', onPointerUp);
+        window.addEventListener('touchcancel', onPointerUp);
+
+        wrapper.addEventListener('mousedown', onPointerDown);
+        window.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('mouseup', onPointerUp);
+        wrapper.addEventListener('mouseleave', function () {
+          if (isDragging) onPointerUp();
+        });
+
+        wrapper.setAttribute('tabindex', '0');
+        wrapper.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            slidePrev();
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            slideNext();
+          }
+        });
+
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            updateCarousel(false);
+          }, 80);
+        });
+
+        updateCarousel(false);
+        setTimeout(function () { updateCarousel(false); }, 150);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setup);
+      } else {
+        setup();
+      }
+    })();
+  </script>
+</body>
+
+</html>

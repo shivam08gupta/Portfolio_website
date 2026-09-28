@@ -1,0 +1,8 @@
+# Large archive file (>100MB exceeds GitHub's file size limit)
+video_frames_30fps.zip
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
