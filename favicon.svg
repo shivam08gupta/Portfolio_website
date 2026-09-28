@@ -9,8 +9,11 @@
         fill: #ffffff;
         letter-spacing: -0.04em;
       }
+      .brand-dot {
+        fill: #FF6B2C;
+      }
     </style>
   </defs>
   <rect width="64" height="64" rx="14" fill="#08080a"/>
-  <text x="32" y="42" text-anchor="middle" class="brand-text">SP.</text>
+  <text x="32" y="42" text-anchor="middle" class="brand-text">SP<tspan class="brand-dot">.</tspan></text>
 </svg>
